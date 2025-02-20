@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/output.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="./assets/js/script.js"></script>
+    <title>Foodi</title>
+</head>
+<body>
+    <header class="bg-header w-full bg-cover bg-center bg-no-repeat font-poppins text-white">
+        <div class="max-w-[300px] xs:max-w-[400px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-[1000px] xl:max-w-[1280px] 2xl:max-w-[1440px] w-full mx-auto flex flex-col gap-[250px] pb-[100px] pt-[44px] xl:pb-[350px]">
+            <div class="flex justify-between items-center">
+                <div>
+                    <img src="./assets/img/Group 1000002267(1).png" alt="">
+                </div>
+                <div class="flex flex-row gap-[50px] font-medium h-10 items-center" id="computer-menu">
+                    <a href="#" class="gap-2 flex-col text-center hidden xl:flex menu-item w-[75px]">
+                        <span>Home</span>
+                    </a>
+    
+                    <a href="#" class="gap-2 flex-col text-center hidden xl:flex menu-item w-[75px]">
+                        <span>Pages</span>
+                    </a>
+    
+                    <a href="#" class="gap-2 flex-col text-center hidden xl:flex menu-item w-[75px]">
+                        <span>Menu</span>
+                    </a>
+    
+                    <a href="#" class="gap-2 flex-col text-center hidden xl:flex menu-item w-[75px]">
+                        <span>Order</span>
+                    </a>
+    
+                    <a href="#" class="gap-2 flex-col text-center hidden xl:flex menu-item w-[75px]">
+                        <span>Blog</span>
+                    </a>
+    
+                    <a href="#" class="gap-2 flex-col text-center hidden xl:flex menu-item w-[75px]">
+                        <span>Contact</span>
+                    </a>
+    
+                    <a href="#" class="gap-2 flex-col text-center hidden xl:flex menu-item w-[75px]">
+                        <span>Shop</span>
+                    </a>
+                    <button class="bg-nav hover:bg-btn_hover transform transition-all duration-300 ease-in-out rounded px-[12px] py-4 text-white h-12 hidden xl:flex items-center w-[139px]">
+                        <span>
+                            RESERVATION
+                        </span>
+                    </button>
+                </div>
+                
+                <div class="flex xl:hidden text-[40px]">
+                    <button id="menu-open">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-8 mx-auto text-center">
+                <div class="gap-6">
+                    <div class="font-medium">
+                        <div class="bg-nav w-[73px] h-[2px] rounded mx-auto mb-2"></div>
+                        <span class="">
+                            HELLO, NEW FRIEND
+                        </span>
+                    </div>
+                    <h1 class="text-[64px] font-semibold mt-6   ">
+                        RESERVE YOUR TABLE
+                    </h1>
+                </div>
+                <div class="flex flex-row justify-center items-center gap-6">
+                    <button class="font-semibold border-white rounded-md border px-[12px] py-4 hover:bg-white hover:text-black transform transition-all duration-300 ease-in-out">BOOK A TABLE</button>
+                    <a href="" class="hover:bg-white px-[12px] rounded-md py-4 hover:text-black transform transition-all duration-300 ease-in-out">
+                        <span class="font-semibold">OPEN MENU</span>
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+        
+    </header>
+
+    <div class="hidden open-menu flex-row justify-between gap-10 items-start py-[45px] px-[50px] sm:px-[95px]" id="mobile-menu">
+        <div class="flex flex-row gap-10 text-3xl flex-wrap items-center">
+            <a href="" class="flex gap-20 flex-col text-center">
+                <span>Home</span>
+            </a>
+    
+            <a href="" class="flex gap-2 flex-col text-center">
+                <span >Pages</span>
+            </a>
+    
+            <a href="" class="flex gap-2 flex-col text-center">
+                <span>Menu</span>
+            </a>
+    
+            <a href="" class="flex gap-2 flex-col text-center">
+                <span>Order</span>
+            </a>
+    
+            <a href="" class="flex gap-2 flex-col text-center">
+                <span>Blog</span>
+            </a>
+    
+            <a href="" class="flex gap-2 flex-col text-center">
+                <span>Contact</span>
+            </a>
+    
+            <a href="" class="flex gap-2 flex-col text-center">
+                <span>Shop</span>
+            </a>
+            <button class="bg-nav hover:bg-btn_hover transform transition-all duration-300 ease-in-out rounded px-6 py-8 text-white h-12 flex items-center">
+                <span>
+                    RESERVATION
+                </span>
+            </button>
+        </div>
+        <button id="menu-close" class="text-[40px]">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+    
+    <section class="font-poppins w-full text-white bg-section">
+        <div class="max-w-[300px] xs:max-w-[400px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-[1000px] xl:max-w-[1280px] 2xl:max-w-[1440px] mx-auto py-[120px] flex flex-col gap-14 md:gap-0">
+            <div class="flex flex-col md:flex-row gap-y-4 jus items-center justify-between">
+                <div class="basis-1/2">
+                    <div>
+                        <div>
+                            <span class="font-medium ">ABOUT US</span>
+                            <div class="bg-nav w-[52px] h-[2px] rounded mt-2"></div>
+                        </div>
+                        <div class="mt-6 ml-0 md:mr-[30px]">
+                            <h1 class="font-semibold text-[36px] mb-3">
+                                <p>We Invite You to Visit Our</p>
+                                <p>Coffee House</p>
+                            </h1>
+                            <div class="max-w-[438px]">
+                                <span class="font-medium text-secondary">Lorem ipsum dolor sit amet consectetur. Dolor elit vitae
+                                    nunc varius. Facilisis eget cras sit semper sit enim. Turpis
+                                        aliquet at ac eu donec ut. Sagittis vestibulum at quis non
+                                            massa netus.
+                                </span>
+                            </div>
+                        </div>
+                        <button class="bg-nav hover:bg-btn_hover transform transition-all duration-300 ease-in-out font-medium rounded px-[12px] py-4 text-white h-12 flex items-center justify-center w-[139px] mt-6">
+                            <span>
+                                READ MORE
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="basis-1/2">
+                    <img src="./assets/img/Rectangle 679.png" alt="">
+                </div>
+            </div>
+            <div class="flex flex-col-reverse md:flex-row gap-y-4 items-center justify-between">
+                <div class="basis-1/2">
+                    <img src="./assets/img/Rectangle 678.png" alt="">
+                </div>
+                <div class="basis-1/2">
+                    <div class="ml-0 md:ml-[30px] lg:ml-[60px] xl:ml-[120px]">
+                        <div>
+                            <span class="font-medium ">COFFEE MENU</span>
+                            <div class="bg-nav w-[52px] h-[2px] rounded mt-2"></div>
+                        </div>
+                        <div class="mt-6">
+                            <h1 class="font-semibold text-[36px] mb-3">Quality Kava Beans</h1>
+                            <div class="max-w-[438px]">
+                                <span class="font-medium text-secondary">Lorem ipsum dolor sit amet consectetur. Dolor elit vitae
+                                    nunc varius. Facilisis eget cras sit semper sit enim. Turpis
+                                        aliquet at ac eu donec ut. Sagittis vestibulum at quis non
+                                            massa netus.
+                                </span>
+                            </div>
+                        </div>
+                        <button class="bg-nav hover:bg-btn_hover transform transition-all duration-300 ease-in-out font-medium rounded px-[12px] py-4 text-white h-12 flex items-center justify-center w-[139px] mt-6">
+                            <span>
+                                READ MORE
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row gap-y-4 items-center justify-between">
+                <div class="basis-1/2">
+                    <div>
+                        <div>
+                            <span class="font-medium ">OUR TEAM</span>
+                            <div class="bg-nav w-[52px] h-[2px] rounded mt-2"></div>
+                        </div>
+                        <div class="mt-6 ml-0 md:mr-[30px]">
+                            <h1 class="font-semibold text-[36px] mb-3">Use the Tips & Recipes of
+                                Our Barista</h1>
+                                <div class="max-w-[438px]">
+                                    <span class="font-medium text-secondary">Lorem ipsum dolor sit amet consectetur. Dolor elit vitae
+                                        nunc varius. Facilisis eget cras sit semper sit enim. Turpis
+                                            aliquet at ac eu donec ut. Sagittis vestibulum at quis non
+                                                massa netus.
+                                    </span>
+                                </div>
+                        </div>
+                        <button class="bg-nav hover:bg-btn_hover transform transition-all duration-300 ease-in-out font-medium rounded px-[12px] py-4 text-white h-12 flex items-center justify-center w-[139px] mt-6">
+                            <span>
+                                READ MORE
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="basis-1/2">
+                    <img src="./assets/img/Rectangle 680.png" alt="">
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="font-poppins text-white w-full bg-section">
+        <div class="max-w-[400px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-[1000px] xl:max-w-[1280px] 2xl:max-w-[1440px] mx-auto pt-[30px] pb-[120px]">
+            <div class="flex flex-col mx-auto gap-[72px]">
+                <div class="flex flex-col">
+                    <div class="flex flex-col items-center">
+                        <span class="font-medium mb-2">FEATURES</span>
+                        <div class="bg-nav w-[52px] h-[2px] rounded mb-4"></div>
+                    </div>
+                    <div class="flex flex-col items-center text-center">
+                        <h1 class="font-semibold text-[30px] md:text-[36px] mb-3">
+                            Why people choose us?
+                        </h1>
+                        <div class="text-secondary max-w-[700px] text-center">
+                            <span>
+                                Lorem ipsum dolor sit amet consectetur. Dolor elit vitae nunc varius. Facilisis eget cras sit semper
+                            sit enim. Turpis aliquet at ac eu donec ut. Sagittis vestibulum at quis non massa netus.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col justify-around lg:flex-row gap-10 lg:gap-[30px]">
+                    <div class="flex flex-col items-center">
+                        <img src="./assets/img/ic_outline-food-bank.png" alt="" class="w-[72px] h-[72px] mb-12">
+                        <div class="text-center flex flex-col gap-6">
+                            <h1 class="font-semibold text-[24px]">MENU FOR EVERY TASTE</h1>
+                            <span class="font-medium text-secondary">Lorem ipsum dolor sit amet consectetur. <p>
+                                Felis eget sit sit scelerisque vestibulum.
+                            </p> <p>
+                                Urna faucibus amet massa lacus lorem.
+                            </p> </span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="./assets/img/fluent-emoji-high-contrast_beans.png" alt="" class="w-[72px] h-[72px] mb-12">
+                        <div class="text-center flex flex-col gap-6">
+                            <h1 class="font-semibold text-[24px]">MENU FOR EVERY TASTE</h1>
+                            <span class="font-medium text-secondary">Lorem ipsum dolor sit amet consectetur. <p>
+                                Felis eget sit sit scelerisque vestibulum.
+                            </p> <p>
+                                Urna faucibus amet massa lacus lorem.
+                            </p> </span>
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="./assets/img/fluent-emoji-high-contrast_cook.png" alt="" class="w-[72px] h-[72px] mb-12">
+                        
+                        <div class="text-center flex flex-col gap-6">
+                            <h1 class="font-semibold text-[24px]">MENU FOR EVERY TASTE</h1>
+                            <span class="font-medium text-secondary">Lorem ipsum dolor sit amet consectetur. <p>
+                                Felis eget sit sit scelerisque vestibulum.
+                            </p> <p>
+                                Urna faucibus amet massa lacus lorem.
+                            </p> </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="font-poppins bg-cover bg-center text-white w-full bg-cook">
+        <div class="max-w-[400px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-[1000px] xl:max-w-[1280px] 2xl:max-w-[1440px] py-[78px] mx-auto">
+            <div class="flex flex-col xl:flex-row justify-between gap-6 xl:gap-0 items-center">
+                <div class="flex flex-col gap-6">
+                    <div>
+                        <div class="flex flex-col mb-[20px]">
+                            <span class="font-medium mb-2">RESERVATION</span>
+                            <div class="bg-nav w-[73px] h-[2px] rounded"></div>
+                        </div>
+                        <h1 class="font-semibold text-[48px]">Working Hours</h1>
+                    </div>
+
+                    <div class="flex items-center gap-6">
+                        <button class="font-medium bg-nav hover:bg-btn_hover transform transition-all duration-300 ease-in-out rounded-md  px-[12px] py-4 ">BOOK A TABLE</button>
+                        <a href="" class="hover:bg-white px-[12px] rounded-md py-4 hover:text-black transform transition-all duration-300 ease-in-out">
+                            <span class="font-semibold text-black xl:text-white">CONTACT US</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="w-[320px] h-[444px] sm:w-[464px] sm:h-[444px] bg-board rounded-[8px]">
+                    <div class="py-[102px] px-[40px] sm:px-[79px] flex flex-col gap-[80px] text-center">
+                        <div class="flex flex-col gap-[20px]">
+                            <h1 class="font-semibold text-[24px]">Sunday to Tuesday</h1>
+                            <span class="font-medium text-[20px]">09:00 AM - 10.00 PM</span>
+                        </div>
+                        <div class="flex flex-col gap-[20px]">
+                            <h1 class="font-semibold text-[24px]">Friday to Saturday</h1>
+                            <span class="font-medium text-[20px]">09:00 AM - 10.00 PM</span>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="font-poppins text-white w-full bg-section">
+        <div class="max-w-[330px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-[1000px] xl:max-w-[1280px] 2xl:max-w-[1440px] mx-auto py-[120px]">
+            <div class="flex flex-col">
+                <div class="flex flex-col items-center">
+                    <span class="font-medium mb-2">FEATURES</span>
+                    <div class="bg-nav w-[52px] h-[2px] rounded mb-4"></div>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <h1 class="font-semibold text-[30px] md:text-[36px] mb-3">
+                        Why people choose us?
+                    </h1>
+                    <div class="text-secondary max-w-[700px]">
+                        <span>
+                            Lorem ipsum dolor sit amet consectetur. Dolor elit vitae nunc varius. Facilisis eget cras sit semper
+                        sit enim. Turpis aliquet at ac eu donec ut. Sagittis vestibulum at quis non massa netus.
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col gap-12 mt-[88px]">
+                <div class="flex flex-col 2xl:flex-row gap-14 2xl:gap-0 justify-between">
+                    <div class="bg-comment rounded-3xl px-[10px] sm:px-[41px] pt-[76px] pb-[56px] text-center relative ">
+                        <div class="flex justify-center">
+                            <div class="w-[80px] h-[80px] rounded-[40px] bg-comment absolute top-[-40px] mx-auto flex items-center justify-center shadow-[0_5px_5px_0_rgba(0,0,0,0.5)]">
+                                <img src="./assets/img/clarity_block-quote-line.png" alt="">
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="sm:max-w-[320px] xl:max-w-[375px]">
+                                <span class="font-normal text-secondary">
+                                    “Lorem ipsum dolor sit amet consectetur.
+                                    Suspendisse aliquet tellus adipiscing
+                                    condimentum donec blandit. Dignissim nunc
+                                    facilisi pretium id molestie lectus duis.”
+                                </span>
+                            </div>
+                            <div class="mt-[20px]">
+                                <div class="flex flex-row gap-[3px] justify-center">
+                                    <img src="./assets/img/star_purple500(1).png" alt="">
+                                    <img src="./assets/img/star_purple500(1).png" alt="">
+                                    <img src="./assets/img/star_purple500(1).png" alt="">
+                                    <img src="./assets/img/star_purple500(1).png" alt="">
+                                    <img src="./assets/img/star_outline(2).png" alt="">
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="font-semibold text-[14px] mt-1">John</span>
+                                    <span class="font-normal text-[12px] text-secondary">Business Man</span>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-comment rounded-3xl px-[10px] sm:px-[41px] pt-[76px] pb-[56px] text-center relative">
+                        <div class="flex justify-center">
+                            <div class="w-[80px] h-[80px] rounded-[40px] bg-comment absolute top-[-40px] mx-auto flex items-center justify-center shadow-[0_5px_5px_0_rgba(0,0,0,0.5)]">
+                                <img src="./assets/img/clarity_block-quote-line(1).png" alt="">
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="sm:max-w-[320px] xl:max-w-[375px]">
+                                <span class="font-normal text-secondary">
+                                    “Lorem ipsum dolor sit amet consectetur.
+                                    Suspendisse aliquet tellus adipiscing
+                                    condimentum donec blandit. Dignissim nunc
+                                    facilisi pretium id molestie lectus duis.”
+                                </span>
+                            </div>
+                            <div class="mt-[20px]">
+                                <div class="flex flex-row gap-[3px] justify-center">
+                                    <img src="./assets/img/star_purple500 .png" alt="">
+                                    <img src="./assets/img/star_purple500 .png" alt="">
+                                    <img src="./assets/img/star_purple500 .png" alt="">
+                                    <img src="./assets/img/star_purple500 .png" alt="">
+                                    <img src="./assets/img/star_outline .png" alt="">
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="font-semibold text-[14px] mt-1">John</span>
+                                    <span class="font-normal text-[12px] text-secondary">Business Man</span>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-comment rounded-3xl px-[10px] sm:px-[41px] pt-[76px] pb-[56px] text-center relative">
+                        <div class="flex justify-center">
+                            <div class="w-[80px] h-[80px] rounded-[40px] bg-comment absolute top-[-40px] mx-auto flex items-center justify-center shadow-[0_5px_5px_0_rgba(0,0,0,0.5)]">
+                                <img src="./assets/img/clarity_block-quote-line(2).png" alt="">
+                            </div>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="sm:max-w-[320px] xl:max-w-[375px]">
+                                <span class="font-normal text-secondary">
+                                    “Lorem ipsum dolor sit amet consectetur.
+                                    Suspendisse aliquet tellus adipiscing
+                                    condimentum donec blandit. Dignissim nunc
+                                    facilisi pretium id molestie lectus duis.”
+                                </span>
+                            </div>
+                            <div class="mt-[20px]">
+                                <div class="flex flex-row gap-[3px] justify-center">
+                                    <img src="./assets/img/star_purple500.png" alt="">
+                                    <img src="./assets/img/star_purple500.png" alt="">
+                                    <img src="./assets/img/star_purple500.png" alt="">
+                                    <img src="./assets/img/star_purple500.png" alt="">
+                                    <img src="./assets/img/star_outline.png" alt="">
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="font-semibold text-[14px] mt-1">John</span>
+                                    <span class="font-normal text-[12px] text-secondary">Business Man</span>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-row justify-center mt-[64px] gap-4">
+                    <div class="h-4 w-4 rounded-[8px] bg-active"></div>
+                    <div class="h-4 w-4 rounded-[8px] bg-not_active"></div>
+                    <div class="h-4 w-4 rounded-[8px] bg-not_active"></div>
+                </div>
+            </div>
+
+            <div class="mt-[74px]">
+                <img src="./assets/img/Line 4.png" alt="">
+            </div>
+
+            <div class="mt-12 flex flex-col md:flex-row gap-8 md:gap-0 justify-between">
+                    <div class="text-center">
+                        <div class="flex items-center justify-center font-bold text-[36px]">
+                            <h1>1287</h1>
+                        <span class="text-nav">+</span>
+                        </div>
+                        <span class="mt-1">VISITORS DAILY</span>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="flex items-center justify-center font-bold text-[36px]">
+                            <h1>578</h1>
+                        <span>+</span>
+                        </div>
+                        <span class="mt-1">DELIVERIES MONTHLY</span>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="flex items-center justify-center font-bold text-[36px]">
+                            <h1>1440</h1>
+                        <span class="text-nav">+</span>
+                        </div>
+                        <span class="mt-1">POSITIVE FEEDBACK</span>
+                    </div>
+
+                    <div class="text-center">
+                        <div class="flex items-center justify-center font-bold text-[36px]">
+                            <h1>40</h1>
+                        <span>+</span>
+                        </div>
+                        <span class="mt-1">AWARDS AND HONORS</span>
+                    </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="hidden 2xl:block font-poppins text-white w-full bg-section py-[80py]">
+        <div class="h-full w-full py-[150px] px-[240px] bg-cover bg-center bg-no-repeat bg-phones">
+            <div class="flex flex-row justify-between">
+                <div class="flex flex-col gap-12">
+                    <div>
+                        <h1 class="text-[48px] font-semibold">
+                            <p>Simple Way To</p>
+                            <p>Order Your Foods</p>    
+                        </h1>
+                    </div>
+    
+                    <div class="flex flex-row gap-3 text-btn_phone">
+                        <button class="py-3 px-[20px] bg-white rounded-[12px] hover:bg-btn_phone_hover transform transition-all duration-300 ease-in-out">
+                            <div class="flex flex-row items-center gap-1">
+                                <div><img src="./assets/img/logos_google-play-icon.png" alt=""></div>
+                                <div class="text-left">
+                                    <p class="font-medium text-[10px]">GET ITON</p>
+                                    <p class="font-semibold text-[24px]">Google Play</p>
+                                </div>
+                            </div>
+                        </button>
+                        <button class="py-3 px-[20px] bg-white rounded-[12px] hover:bg-btn_phone_hover transform transition-all duration-300 ease-in-out">
+                            <div class="flex flex-row items-center gap-1">
+                                <div><img src="./assets/img/ic_sharp-apple.png" alt=""></div>
+                                <div class="text-left">
+                                    <p class="font-medium text-[10px]">GET ITON</p>
+                                    <p class="font-semibold text-[24px]">Apple Store</p>
+                                </div>
+                            </div>
+                        </button>
+    
+                    </div>
+                </div>
+
+                <div class="static flex flex-row">
+                    <div class="absolute right-[200px] transform -translate-y-[130px]">
+                        <img src="./assets/img/Page 2.png" alt="">
+
+                    </div>
+                    <div class="absolute right-[510px] transform -translate-y-[215px]">
+                        <img src="./assets/img/Group 41.png" alt="">
+
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="font-poppins text-white w-full bg-section">
+        <div class="max-w-[330px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-[1000px] xl:max-w-[1280px] 2xl:max-w-[1440px] mx-auto py-[120px]">
+            <div class="flex flex-col">
+                <div class="flex flex-col items-center">
+                    <span class="font-medium mb-2">MENU</span>
+                    <div class="bg-nav w-[52px] h-[2px] rounded mb-4"></div>
+                </div>
+                <div class="flex flex-col items-center text-center">
+                    <h1 class="font-semibold text-[30px] md:text-[36px] mb-3">
+                        Explore Our Foods
+                    </h1>
+                    <div class="text-secondary max-w-[700px]">
+                        <span>
+                            Lorem ipsum dolor sit amet consectetur. Dolor elit vitae nunc varius. Facilisis eget cras sit semper
+                            sit enim. Turpis aliquet at ac eu donec ut. Sagittis vestibulum at quis non massa netus.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-[72px] flex flex-col lg:flex-row justify-between gap-6">
+                <div class="bg-board rounded-[8px]">
+                    <div>
+                        <img src="./assets/img/Rectangle 670.png" alt="" class="w-full">
+                    </div>
+                    <div class="p-5">
+                        <div>
+                            <h1 class="font-semibold text-[24px] text-nav">Raspberry French Toast</h1>
+                            <span class="font-medium text-secondary">Time: 10 - 15 Minutes | Serves: 1</span>
+                        </div>
+
+                        <div class="mt-4 flex gap-2 font-semibold text-[24px]">
+                            <span class="text-nav">$12.50</span>
+                            <div class="relative">
+                                <span class="text-line">$13.20</span>
+                                <div class="w-full h-[2px] bg-line absolute top-[17px]"></div>
+                            </div>
+                        </div>
+                        
+                        <button class="bg-nav hover:bg-btn_hover transform transition-all duration-300 ease-in-out rounded mt-4 px-4 py-[10px] text-board h-12 flex items-center w-[117px] text-center">
+                            <span class="font-medium leading-[28px]">
+                                Order Now
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-board rounded-[8px]">
+                    <div>
+                        <img src="./assets/img/Rectangle 670(1).png" alt="" class="w-full">
+                    </div>
+                    <div class="p-5">
+                        <div>
+                            <h1 class="font-semibold text-[24px] text-nav">Raspberry French Toast</h1>
+                            <span class="font-medium text-secondary">Time: 10 - 15 Minutes | Serves: 1</span>
+                        </div>
+
+                        <div class="mt-4 flex gap-2 font-semibold text-[24px]">
+                            <span class="text-nav">$12.50</span>
+                            <div class="relative">
+                                <span class="text-line">$13.20</span>
+                                <div class="w-full h-[2px] bg-line absolute top-[17px]"></div>
+                            </div>
+                        </div>
+                        
+                        <button class="bg-nav hover:bg-btn_hover transform transition-all duration-300 ease-in-out rounded mt-4 px-4 py-[10px] text-board h-12 flex items-center w-[117px] text-center">
+                            <span class="font-medium leading-[28px]">
+                                Order Now
+                            </span>
+                        </button>
+                    </div>
+                </div>
+                <div class="bg-board rounded-[8px]">
+                    <div>
+                        <img src="./assets/img/Rectangle 670(2).png" alt="" class="w-full">
+                    </div>
+                    <div class="p-5">
+                        <div>
+                            <h1 class="font-semibold text-[24px] text-nav">Raspberry French Toast</h1>
+                            <span class="font-medium text-secondary">Time: 10 - 15 Minutes | Serves: 1</span>
+                        </div>
+
+                        <div class="mt-4 flex gap-2 font-semibold text-[24px]">
+                            <span class="text-nav">$12.50</span>
+                            <div class="relative">
+                                <span class="text-line">$13.20</span>
+                                <div class="w-full h-[2px] bg-line absolute top-[17px]"></div>
+                            </div>
+                        </div>
+                        
+                        <button class="bg-nav hover:bg-btn_hover transform transition-all duration-300 ease-in-out rounded mt-4 px-4 py-[10px] text-board h-12 flex items-center w-[117px] text-center">
+                            <span class="font-medium leading-[28px]">
+                                Order Now
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>  
+    </section>
+
+    <section class="font-poppins w-full bg-cover bg-center bg-cook_footer text-white bg-section">
+        <div class="max-w-[330px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-[1000px] xl:max-w-[1280px] 2xl:max-w-[1440px] mx-auto py-[83px] flex justify-center lg:justify-start">
+            <div class="md:max-w-[440px] lg:max-w-[880px]">
+                <div class="flex flex-col">
+                    <span class="font-medium mb-2">NEWS LETTER</span>
+                    <div class="bg-nav w-[52px] h-[2px] rounded"></div>
+                </div>
+                <div class="mt-6 flex flex-col gap-3">
+                    <h1 class="font-semibold text-[36px]">Subscribe Our Newsletter</h1>
+                    <span class="font-medium text-secondary">
+                        Lorem ipsum dolor sit amet consectetur. Dolor elit vitae nunc varius. Facilisis eget cras sit semper sit enim.
+                        Turpis aliquet at ac eu donec ut.</span>
+                </div>
+                <form class="flex flex-col lg:flex-row gap-4 mt-6">
+                    <input type="text" placeholder="Type here" class="px-[26px] py-[15px] rounded-[8px] text-form_input basis-4/5 bg-form_field">
+                    <button type="submit" class="font-medium leading-[28px] px-6 py-2 rounded-[4px] bg-nav hover:bg-btn_hover transform transition-all duration-300 ease-in-out basis-1/5">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="font-poppins text-white w-full bg-section">
+        <div class="max-w-[330px] sm:max-w-[500px] md:max-w-[700px] lg:max-w-[1000px] xl:max-w-[1280px] 2xl:max-w-[1440px] mx-auto pt-[60px] pb-4">
+            
+            <div class="flex flex-col gap-14 xl:gap-0 xl:flex-row justify-between">
+                <div class="flex flex-col items-center xl:items-start">
+                    <div>
+                        <img src="./assets/img/Group 1000002267(1).png" alt="">
+                    </div>
+
+                    <div class="mt-6 w-[300px] sm:w-[400px]">
+                        <span class="font-medium text-[14px] text-secondary">
+                            Lorem ipsum dolor sit amet consectetur. Tristique cursus
+                            morbi nibh nec et vulputate. Turpis tortor nisi imperdiet
+                            quis accumsan. Ligula netus amet leo ultricies. Neque
+                            venenatis magnis amet eget sagittis leo enim.
+                        </span>
+                    </div>
+                    <div class="flex flex-row gap-4 mt-8">
+                        <img src="./assets/img/Group 1000002267.png" alt="">
+                        <img src="./assets/img/Group 1000002268.png" alt="">
+                        <img src="./assets/img/Group 1000002269.png" alt="">
+                        <img src="./assets/img/Group 1000002270.png" alt="">
+                    </div>
+                </div>
+
+                <div class="flex items-center lg:items-start flex-col lg:flex-row justify-between gap-6 lg:gap-0 xl:gap-[75px]">
+                    <div class="flex gap-10">
+                        <div>
+                            <h1 class="font-semibold">Opening Restaurent</h1>
+                            <div class="text-secondary text-[14px] mt-3 flex flex-col gap-1">
+                                <p>Sa - We: 09 :00am - 10:00pm</p>
+                                <p>Thu - We: 09 :00am - 10:00pm</p>
+                                <p>Friday Closed</p>
+                            </div>
+                        </div>
+    
+                        <div>
+                            <h1 class="font-semibold">User Link</h1>
+                            <div class="text-secondary text-[14px] mt-3 flex flex-col gap-1">
+                                <p>About Us</p>
+                                <p>Contact Us</p>
+                                <p>Order Delivery</p>
+                                <p>Payment & Tax</p>
+                                <p>Terms of Services</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col items-center lg:items-start">
+                        <h1 class="font-semibold">Contact Us</h1>
+                        <div class="text-secondary text-[14px] mt-3 flex flex-col">
+                            <p>543 Country Club Ave,</p>
+                            <p>NC 27587, London, UK</p>
+                            <p>+1257 6541120</p>
+                        </div>
+                        <form class="flex flex-row mt-6 p-2 bg-white rounded-[8px]">
+                            <input type="text" placeholder="Email" class="py-2 px-4 text-email_input w-[140px] sm:w-[180px] bg-white font-medium text-[20px]">
+                            <button type="submit" class="font-medium text-[20px] w-[140px] sm:w-[180px] px-6 py-2 rounded-[4px] bg-nav hover:bg-btn_hover transform transition-all duration-300 ease-in-out">
+                                Subscribe
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="mt-[72px]">
+                <img src="./assets/img/Line 4.png" alt="">
+            </div>
+
+            <div class="mt-4 flex flex-col gap-4 md:flex-row  justify-between items-center font-medium text-[14px] text-secondary">
+                <div>
+                    <span>©2024 ARR, All right reserved</span>
+                </div>
+                <div class="flex gap-8">
+                    <span>Privacy Policy</span>
+                    <span>Terms of Use</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
